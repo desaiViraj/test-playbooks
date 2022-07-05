@@ -1,0 +1,8 @@
+---
+ - hosts: iad
+   tasks:
+     - name: copy file content
+       copy:
+         content: "Just copied through Ansible"
+         dest: /home/videssa/dest.txt
+...
