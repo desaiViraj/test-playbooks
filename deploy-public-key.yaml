@@ -1,0 +1,12 @@
+---
+- name: Public key is deployed on managed hosts
+  hosts: all
+  tasks:
+     - name: Ensure key is in users ~/.ssh/authorized_hosts
+       authorized_key:
+                user: videssa
+                state: present
+                key: '{{ itme }}'
+       with_file:
+               - ~/.ssh/id_ras.pub
+...
