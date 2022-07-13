@@ -1,0 +1,9 @@
+---
+- name: Delete user on remote machine
+  hosts: dev
+  tasks:
+    - name: Deleting user
+      user:
+        name: newbie
+        state: absent
+
