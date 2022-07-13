@@ -1,0 +1,9 @@
+---
+- name: Add user to remote hosts
+  hosts: dev
+  tasks:
+    - name: Adding user
+      user: 
+        name: newbie
+        uid: 4000
+        state: present
