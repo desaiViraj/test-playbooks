@@ -1,0 +1,11 @@
+---
+- name: Remove the apache package from managed hosts
+  hosts: dev
+  tasks:
+    - name: Uninstalling apache
+      yum:
+        name: httpd
+        state: absent
+      register: result
+
+    - debug: var=result
