@@ -1,0 +1,6 @@
+---
+- name: Display the facts
+  hosts: dev
+  tasks:
+    - name: Gather facts
+      debug: var=ansible_facts['architecture']
